@@ -1,0 +1,61 @@
+{
+  "_comment": "CAMchamp Global System Configuration",
+  "version": "1.0",
+  
+  "units": {
+    "internal_units": "inches",
+    "_comment": "All internal calculations use inches. Conversion happens at I/O boundaries."
+  },
+  
+  "stock": {
+    "default_diameter_safety_factor": 1.03,
+    "face_cleanup_allowance_in": 0.050,
+    "_comment": "Safety factor accounts for stock tolerance and facing cleanup"
+  },
+  
+  "machining": {
+    "default_rough_stock_to_leave_in": 0.020,
+    "default_finish_stock_to_leave_in": 0.000,
+    "max_tool_deflection_in": 0.002,
+    "_comment": "Depth of cut will be reduced if calculated deflection exceeds max"
+  },
+  
+  "dynamic_rough_finishing": {
+    "enabled": true,
+    "deflection_force_ratio_factor": 1000,
+    "_comment": "Threshold = factor / elastic_modulus. E.g., steel: 1000/29000 = 0.0345 in/lbf",
+    "min_step_size_in": 0.100,
+    "tailstock_stiffness_multiplier": 10,
+    "_comment_2": "When tailstock engaged, multiply threshold by this factor"
+  },
+  
+  "paths": {
+    "tool_database": "./data/tools.db",
+    "stock_database": "./data/stock.db",
+    "machine_config_dir": "./config/machines/",
+    "material_config": "./config/materials.json",
+    "material_aliases": "./config/material_aliases.json",
+    "tool_properties": "./config/tool_properties.json",
+    "output_directory": "./output/"
+  },
+  
+  "logging": {
+    "console_level": "info",
+    "_comment": "Levels: error, warning, info, debug",
+    "file_level": "info",
+    "log_directory": "./logs/",
+    "timestamp_format": "%Y-%m-%d %H:%M:%S"
+  },
+  
+  "fusion_integration": {
+    "fusion_api_version": "latest",
+    "operation_naming_convention": "OP{number:03d}_{type}",
+    "_comment": "E.g., OP010_face, OP020_rough_OD"
+  },
+  
+  "licensing": {
+    "check_updates_on_startup": true,
+    "update_check_url": "https://www.cogchamp.com/camchamp/version.json",
+    "trial_period_days": 30
+  }
+}
