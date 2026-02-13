@@ -4,8 +4,8 @@
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>shaft.step --material steel_1018 --machine doosan_smx2100</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"C:\Users\Villkiss\Documents\CAMchamp_samples\gear bishop.stp" --material steel_1018 --machine doosan_smx2100</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArgumentsHistory>shaft.step --material steel_1018 --machine doosan_smx2100|</LocalDebuggerCommandArgumentsHistory>
+    <LocalDebuggerCommandArgumentsHistory>"C:\Users\Villkiss\Documents\CAMchamp_samples\simplestPin_mm.stp" --material steel_1018 --machine doosan_smx2100|"C:\Users\Villkiss\Documents\CAMchamp_samples\empty.stp" --material steel_1018 --machine doosan_smx2100|"C:\Users\Villkiss\Documents\CAMchamp_samples\twoPins.stp" --material steel_1018 --machine doosan_smx2100|"C:\Users\Villkiss\Documents\CAMchamp_samples\simplestPin.stp" --material steel_1018 --machine doosan_smx2100|"C:\Users\Villkiss\Documents\CAMchamp_samples\gear bishop.stp" --material steel_1018 --machine doosan_smx2100|</LocalDebuggerCommandArgumentsHistory>
   </PropertyGroup>
 </Project>

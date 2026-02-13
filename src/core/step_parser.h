@@ -2,6 +2,7 @@
 
 #include "types.h"
 #include <string>
+#include <TopoDS_Shape.hxx>
 
 namespace camchamp {
 
@@ -30,9 +31,7 @@ public:
     
 private:
     std::string step_file_path_;
-    // TODO: Add OpenCASCADE shape objects
-    // TopoDS_Shape shape_;
-    bool is_inches_;
+    TopoDS_Shape shape_;
     BoundingBox bbox_;
 };
 

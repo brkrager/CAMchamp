@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="CAMchamp.vcxproj" />
+  <Project Path="CAMchamp.vcxproj" Id="907052b8-6210-41b2-aa03-033d8aa3a731" />
 </Solution>

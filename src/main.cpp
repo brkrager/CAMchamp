@@ -5,10 +5,12 @@
 // TODO: Include headers as they're implemented
 // #include "utils/logger.h"
 // #include "utils/config_loader.h"
-// #include "core/step_parser.h"
+#include "core/step_parser.h"
 // #include "core/feature_extractor.h"
 // #include "core/operation_planner.h"
 // #include "output/json_generator.h"
+
+using namespace camchamp;
 
 void print_usage() {
     std::cout << "CAMchamp v1.0.0 - Automatic Mill-Turn CAM System\n";
@@ -149,14 +151,15 @@ int main(int argc, char* argv[]) {
 
         // TODO: Parse STEP file
         std::cout << "[1/7] Parsing STEP file...\n";
-        // StepParser parser(step_file);
-        // parser.Validate();
-        // parser.DetectUnits();  // Prompts user for confirmation
-        // parser.Parse();
+        StepParser parser(step_file);
+        parser.Validate();
+        parser.Parse();
+        parser.DetectUnits();
+        
 
         // TODO: Detect axis of revolution
         std::cout << "[2/7] Detecting axis of revolution...\n";
-        // AxisOfRevolution axis = parser.DetectAxisOfRevolution();
+        AxisOfRevolution axis = parser.DetectAxisOfRevolution();
 
         // TODO: Extract 2D profile
         std::cout << "[3/7] Extracting 2D profile...\n";
