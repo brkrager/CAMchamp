@@ -35,4 +35,8 @@ private:
     BoundingBox bbox_;
 };
 
+bool IsParallel(const gp_Dir& dir1, const gp_Dir& dir2, double angular_tolerance_deg);
+bool AxisPassesThroughPoint(const gp_Ax1& axis, const gp_Pnt& point, double distance_tolerance_mm);
+bool AreSameAxis(const gp_Ax1& axis1, const gp_Ax1& axis2, double angular_tolerance_deg, double distance_tolerance_mm);
+
 } // namespace camchamp
